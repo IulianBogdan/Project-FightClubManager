@@ -1,12 +1,134 @@
-﻿<Window x:Class="FightClubManager.MainWindow"
+﻿<Window x:Class="FinalProject.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FightClubManager"
+        xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="546" Width="853.056">
+
+    <Grid Margin="0,10,4.4,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="429" Margin="4,0,0,15" VerticalAlignment="Bottom" Width="824">
+            <Grid.RowDefinitions>
+
+            </Grid.RowDefinitions>
+            <TabControl HorizontalAlignment="Left" Height="463" VerticalAlignment="Top" Width="839" Margin="0,-67,-15,0">
+                <TabItem Header="Main" Margin="0,0,-3.6,0">
+                    <Grid Background="#FFE5E5E5" Margin="0,4,-0.2,0.4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="78*"/>
+                            <ColumnDefinition Width="755*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Member" Margin="6.8,0,-10,0" Height="19" VerticalAlignment="Top">
+                    <Grid Background="#FFE5E5E5" Margin="0,-2,-1.2,-47.8" RenderTransformOrigin="0.502,0.573">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="138*"/>
+                            <ColumnDefinition Width="214*"/>
+                            <ColumnDefinition Width="481*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid HorizontalAlignment="Left" Height="427" Margin="6,10,0,0" VerticalAlignment="Top" Width="827" Grid.ColumnSpan="3"/>
+                        <Image Name="memberImage" HorizontalAlignment="Left" Height="142" Margin="10,21,0,0" VerticalAlignment="Top" Width="127" Stretch="UniformToFill"/>
+                        <Button Name="btn_retrievePictureForSelection" Content="See picture" HorizontalAlignment="Left" Margin="366.2,248,0,217.2" VerticalAlignment="Center" Width="80" RenderTransformOrigin="0.500,0.70" Height="19" Visibility="Hidden" Click="btn_retrievePictureForSelection_Click" Grid.Column="2"/>
+                        <Button Name="btn_uploadPicture" Content="Upload Picture" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.237,0.65" Click="btn_uploadPicture_Click"/>
+                        <Label Content="First Name" HorizontalAlignment="Left" Margin="12.6,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.149,0.346" Grid.Column="1"/>
+                        <Label Content="Last Name" HorizontalAlignment="Left" Margin="12.6,47,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                        <Label Content="Nickname" HorizontalAlignment="Left" Margin="12.6,73,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                        <Label Content="Nationality" HorizontalAlignment="Left" Margin="12.6,99,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                        <Label Content="Email" HorizontalAlignment="Left" Margin="12.6,125,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                        <Label Content="Age" HorizontalAlignment="Left" Margin="12.6,150,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                        <TextBox Name="firstNameTB" Text="" HorizontalAlignment="Left" Height="23" Margin="79.6,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                        <TextBox Name="lastNameTB" Text="" HorizontalAlignment="Left" Height="23" Margin="79.6,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                        <TextBox Name="nicknameTB" Text="" HorizontalAlignment="Left" Height="23" Margin="79.6,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                        <TextBox Name="nationalityTB" Text="" HorizontalAlignment="Left" Height="23" Margin="79.6,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                        <TextBox Name="emailTB" Text="" HorizontalAlignment="Left" Height="23" Margin="79.6,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                        <TextBox Name="ageTB" Text="" HorizontalAlignment="Left" Height="23" Margin="79.6,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                        <Label Content="Weight" HorizontalAlignment="Left" Margin="207.6,22,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Content="Mobile №" HorizontalAlignment="Left" Margin="207.6,48,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Content="Address" HorizontalAlignment="Left" Margin="207.6,74,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Content="Fighter Status" HorizontalAlignment="Left" Margin="207.6,100,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Content="Am Record" HorizontalAlignment="Left" Margin="207.6,126,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Content="Pro Record" HorizontalAlignment="Left" Margin="207.6,151,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <TextBox  Name="weightTB" Text="" HorizontalAlignment="Left" Height="23" Margin="53.2,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <TextBox Name="phoneNumberTB" Text="" HorizontalAlignment="Left" Height="23" Margin="53.2,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <TextBox Name="adressTB" Text="" HorizontalAlignment="Left" Height="23" Margin="53.2,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                        <TextBox Name="proWTB" Text="" HorizontalAlignment="Left" Height="22" Margin="61.2,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Grid.Column="2"/>
+                        <Button Name="btn_AddNew" Content="Add New Member" HorizontalAlignment="Left" Margin="272.2,24,0,0" VerticalAlignment="Top" Width="184" Click="btn_AddNew_Click" Grid.Column="2"/>
+                        <Button Name="btn_EditMbr" Content="Edit Existing Member" HorizontalAlignment="Left" Margin="272.2,49,0,0" VerticalAlignment="Top" Width="184" Grid.Column="2"/>
+                        <Button Name="btn_DeleteMbr" Content="Delete Existing Member" HorizontalAlignment="Left" Margin="17,272,0,0" VerticalAlignment="Top" Width="141" Click="btn_DeleteMbr_Click" RenderTransformOrigin="-0.115,8.146" Grid.ColumnSpan="2"/>
+                        <Button Name="btn_Notify" Content="Notify Member for fee payment" HorizontalAlignment="Left" Margin="272.2,76,0,0" VerticalAlignment="Top" Width="184" Grid.Column="2"/>
+                        <TextBox Name="statusTB" Text="" HorizontalAlignment="Left" Height="21" Margin="77.2,104,0,0" VerticalAlignment="Top" Width="92" Grid.Column="2"/>
+                        <TextBox Name="proLTB" Text="" HorizontalAlignment="Left" Height="22" Margin="93.2,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Grid.Column="2"/>
+                        <TextBox Name="proDTB" Text="" HorizontalAlignment="Left" Height="22" Margin="129.2,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Grid.Column="2"/>
+                        <TextBox Name="amWTB" Text="" HorizontalAlignment="Left" Height="22" Margin="61.2,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Grid.Column="2"/>
+                        <TextBox Name="amLTB" Text="" HorizontalAlignment="Left" Height="22" Margin="93.2,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Grid.Column="2"/>
+                        <TextBox Name="amDTB" Text="" HorizontalAlignment="Left" Height="22" Margin="129.2,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27" Grid.Column="2"/>
+                        <Label Content="Date of birth" HorizontalAlignment="Left" Margin="12.6,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.083,-0.539" Grid.Column="1"/>
+                        <TextBox x:Name="dObTB" Text="" HorizontalAlignment="Left" Height="23" Margin="94.6,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Button x:Name="SaveChanges" Content="Save Changes" HorizontalAlignment="Left" Margin="41.2,192,0,0" VerticalAlignment="Top" Width="99" Click="SaveChanges_Click" Grid.Column="2"/>
+                        <DataGrid Name="MemberGrid" HorizontalAlignment="Left" Height="116" Margin="17,307,0,0" VerticalAlignment="Top" Width="806" AutoGenerateColumns="False" SelectionChanged="MemberGrid_SelectionChanged" CanUserAddRows="False" ItemsSource="{Binding}" Grid.ColumnSpan="3">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="MemberID" Width="auto" Binding="{Binding MemberID}"/>
+                                <DataGridTextColumn Header="First Name" Width="auto" Binding="{Binding FirstName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Last Name" Width="auto" Binding="{Binding LastName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Nickname" Width="auto" Binding="{Binding Nickname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Nationality" Width="auto" Binding="{Binding Nationality,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Date of birth" Width="auto" Binding="{Binding DateOfBirth,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Age" Width="auto" Binding="{Binding Age,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Weight" Width="auto" Binding="{Binding Weight,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Phone" Width="auto" Binding="{Binding PhoneNumber,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding Email,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Adress" Width="auto" Binding="{Binding Adress,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Status" Width="auto" Binding="{Binding Status,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Professional Wins" Width="auto" Binding="{Binding ProfessionalWins,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Professional Losses" Width="auto" Binding="{Binding ProfessionalLosses,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Professional Draws" Width="auto" Binding="{Binding ProfessionalDraws,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Amateur Wins" Width="auto" Binding="{Binding AmateurWins,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Amateur Losses" Width="auto" Binding="{Binding AmateurLosses,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                <DataGridTextColumn Header="Amateur Draws" Width="auto" Binding="{Binding AmateurDraws,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Tournament" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="81" Margin="75,0,-75.2,0">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="303*"/>
+                            <ColumnDefinition Width="530*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Event" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="54" Margin="-64.8,0,65.2,0">
+                    <Grid Background="#FFE5E5E5" Margin="0,0,-5.2,0.4">
+                        <Calendar HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="198" Width="208"/>
+                        <ListView x:Name="listView" HorizontalAlignment="Left" Height="170" Margin="10,245,0,0" VerticalAlignment="Top" Width="298">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Button x:Name="CreateEvent" Content="Create new event" HorizontalAlignment="Left" Margin="223,16,0,0" VerticalAlignment="Top" Width="105"/>
+                        <Button x:Name="DeleteEvent" Content="Delete event" HorizontalAlignment="Left" Margin="223,220,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.203,0.469"/>
+                        <Button x:Name="EditEvent" Content="Edit event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,220,0,0" RenderTransformOrigin="0.331,-0.667"/>
+                        <Label x:Name="label" Content="Type" HorizontalAlignment="Left" Margin="409,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.266,-0.594"/>
+                        <Label x:Name="label1" Content="Title" HorizontalAlignment="Left" Margin="409,54,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="label2" Content="Location" HorizontalAlignment="Left" Margin="409,95,0,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.38,0.34"/>
+                        <Label x:Name="label3" Content="Description" HorizontalAlignment="Left" Margin="393,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.495,1.664"/>
+                        <TextBox x:Name="textBox"  HorizontalAlignment="Left" Height="23" Margin="483,17,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="145"/>
+                        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="26" Margin="483,54,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="145"/>
+                        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="30" Margin="483,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="131" Margin="483,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225"/>
+                        <Button x:Name="SaveEvent" Content="Save" HorizontalAlignment="Left" Margin="633,285,0,0" VerticalAlignment="Top" Width="75"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+
     </Grid>
 </Window>
